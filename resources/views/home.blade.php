@@ -6,17 +6,16 @@
 				<div class="col-sm-12">
 					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-							<li data-target="#slider-carousel" data-slide-to="3"></li>
+						@foreach($products as $item)	
+							<li data-target="#slider-carousel" data-slide-to="" class= "{{$item['id']==19 ?'active':''}} "></li>	
+						@endforeach	
 						</ol>
 						
 						<div class="carousel-inner">
 						@foreach($products as $item)
 							<div class="item {{$item['id']==19 ?'active':''}}">
 								
-							<div class="col-sm-6">
+							  <div class="col-sm-6">
 									<h4></h4>
 									<h2>{{$item['name']}}</h2>
 									<p>{{$item['description']}}</p>

@@ -51,10 +51,10 @@
   <label for="exampleFormControlTextarea1" class="form-label">Select category</label>
   <select  name="category" class="form-control">
    <option selected>Open this select menu</option>
-   <option value="Men">Home|Men</option>
-   <option value="Women">Home|Women</option>
-   <option value="Kid">Home|Kid</option>
-   <option value="Home">Home|Home</option>
+   <option value="Home|Men">Home|Men</option>
+   <option value="Home|Women">Home|Women</option>
+   <option value="Home|Kid">Home|Kid</option>
+   <option value="Home|Home">Home|Home</option>
    <option value="Electronics|Electronics">Electronics|Electronics</option>
    <option value="Men|Men">Men|Men</option>
    <option value="Women|Women">Women|Women</option>

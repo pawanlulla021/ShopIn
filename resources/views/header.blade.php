@@ -14,8 +14,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href=""><i class="fa fa-phone"></i> +91 91********</a></li>
-								<li><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDfllcbMmnbbTxTFgKpxvQbDTxXmSlKBnpRKMNNQSmCpXXJCmLbrQzrSjDmwvdLmJmjBSF"><i class="fa fa-envelope"></i>pawanlulla0**@gmail.com</a></li>
+								<li><a href=""><i class="fa fa-phone"></i> +91 9146332153</a></li>
+								<li><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDfllcbMmnbbTxTFgKpxvQbDTxXmSlKBnpRKMNNQSmCpXXJCmLbrQzrSjDmwvdLmJmjBSF"><i class="fa fa-envelope"></i>pawanlulla021@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="/user/home" class="active">Home</a></li>
+								<li><a href="/user/home">Home</a></li>
 								<li class="dropdown"><a href="#">Shop By Category<i class="fa fa-angle-down"></i></a>
                   <ul role="menu" class="sub-menu">
                     <li><a href="/user/men">Men</a></li>

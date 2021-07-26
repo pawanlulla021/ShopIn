@@ -22,7 +22,7 @@ Route::get('/add/men', function () {
 
 
 
-Route::get('/admin/login', function () {
+/*Route::get('/admin/login', function () {
     return view('admin.login');
 });
 
@@ -30,7 +30,7 @@ Route::get('/admin/logout', function () {
     //ye session ko forget 
     Session::forget('user');
     return redirect('/admin/login');
-});
+});*/
 
 
 Route::post('/admin/login',[UserController::class,'admin_login']);
@@ -80,3 +80,8 @@ Route::get('/user/electronic',[ProductController::class,'electronic']);
 Route::get('/user/contact', [ProductController::class,'contact']);
 Route::get('/user/about', [ProductController::class,'about']);
 
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

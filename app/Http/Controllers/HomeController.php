@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Order;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
     function addproduct(Request $req)
     {      
-      if($req->session()->has('user')){     
+      if (Auth::check()) {     
         $product=$req->file('img_src');
         $reIamge=time().'.'.$product->getClientOriginalExtension();
         $dest=public_path('/admin_images');
@@ -29,7 +31,7 @@ class HomeController extends Controller
         return redirect('/add/men');
       }
       else{
-       return redirect('/admin/login');
+       return redirect('login');
       }  
     }
 
@@ -50,23 +52,23 @@ class HomeController extends Controller
 
     public function update(Request $req,$id)
     {
-      if($req->session()->has('user')){
+      if (Auth::check()) {
         Product ::where('id', $id)->update(['name'=> $req->name,'price'=> $req->price,'category' => $req->category ,'description'=> $req->description]);
         return redirect('/products');
        }
       else{
-      return redirect('/admin/login');
+      return redirect('/login');
       } 
     }
 
     public function destroy(Request $req,$id)
     {
-       if($req->session()->has('user')){
+      if (Auth::check()) {
         Product::where('id',$id)->delete();
         return redirect()->back();
        }
        else{
-        return redirect('/admin/login');
+        return redirect('/login');
        } 
     }
 
@@ -81,12 +83,12 @@ class HomeController extends Controller
 
     public function deliveryupdate(Request $req,$id)
     {
-       if($req->session()->has('user')){
+      if (Auth::check()) {
         Order ::where('order_id', $id)->update(['status'=> $req->category]);
         return redirect()->back();    
        }
        else{
-        return redirect('/admin/login');
+        return redirect('/login');
        }
     } 
 
@@ -108,4 +110,10 @@ class HomeController extends Controller
     {
         return view('login');
     }
+    public function index()
+    {
+      
+    }
+
+
 }

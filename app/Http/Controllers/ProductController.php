@@ -114,7 +114,7 @@ class ProductController extends Controller
 
       return redirect('/user/home');
   }
-    
+   // 
   function myOrdershistory()
   {
     $userId=Session::get('user')['id']; 

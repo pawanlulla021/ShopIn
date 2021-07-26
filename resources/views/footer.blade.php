@@ -54,7 +54,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2021 pawan lulla Inc. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2021 pawan lulla</p>
 				</div>
 			</div>
 		</div>

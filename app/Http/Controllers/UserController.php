@@ -32,12 +32,12 @@ class UserController extends Controller
 
     function admin_login(Request $req)
     {
-        $user = User::where(['email' => $req->input('email_id')])->first();
-        if(!$user || !Hash::check($req->email_password,$user->password)){
+        $admin = Admin::where(['email' => $req->input('email_id')])->first();
+        if(!$admin || !Hash::check($req->email_password,$admin->password)){
             return "Username or password is incorrect";
         }
         else{
-            $req->session()->put('user',$user);
+            $req->session()->put('admin',$admin);
             return redirect('/admin/home');
         }
     }
